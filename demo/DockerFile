@@ -1,0 +1,9 @@
+FROM openjdk:17-jdk-slim
+
+WORKDIR /example
+
+COPY target/*.jar demo-1.jar
+
+EXPOSE 8080
+
+CMD ["java", "-jar", "app.jar"]
